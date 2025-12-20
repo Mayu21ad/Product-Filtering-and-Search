@@ -45,15 +45,20 @@ const FilterBar: React.FC<FilterBarProps> = ({
         {/* Price Range Filter */}
         <Box sx={{ width: 200 }}>
           <Typography variant="body2" gutterBottom>Price Range</Typography>
-          <Slider
-            value={priceRange}
-            min={minPrice}
-            max={maxPrice}
-            step={1}
-            onChange={(_, value) => onPriceRangeChange(value as [number, number])}
-            valueLabelDisplay="auto"
-            disableSwap
-          />
+          <Box display="flex" justifyContent="space-between" alignItems="center">
+            <span className={styles.priceRangeExtreme}>{minPrice}</span>
+            <Slider
+              value={priceRange}
+              min={minPrice}
+              max={maxPrice}
+              step={1}
+              onChange={(_, value) => onPriceRangeChange(value as [number, number])}
+              valueLabelDisplay="auto"
+              disableSwap
+              sx={{ flex: 1, mx: 2 }}
+            />
+            <span className={styles.priceRangeExtreme}>{maxPrice}</span>
+          </Box>
         </Box>
 
         {/* Sort Filter */}

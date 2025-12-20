@@ -26,7 +26,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, renderActions }) =>
               className={styles.productCardMedia}
             />
             <CardContent className={styles.productCardContent}>
-              <Typography gutterBottom variant="h6" component="div" noWrap>
+              <Typography gutterBottom variant="h6" component="div" noWrap sx={{ color: 'var(--product-title)' }}>
                 {product.title}
               </Typography>
               <Typography variant="subtitle1" sx={{ color: 'var(--primary-green)' }}>

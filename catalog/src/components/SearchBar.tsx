@@ -30,7 +30,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChange }) => {
           maxWidth: 480,
           width: '100%',
           margin: '0 auto',
-          background: '#181f1b',
           borderRadius: '8px',
           boxShadow: '0 2px 8px 0 rgba(0,255,153,0.08)',
         }}
