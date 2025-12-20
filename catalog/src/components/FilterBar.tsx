@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Box, FormControl, InputLabel, Select, MenuItem, Slider, Typography, Stack } from '@mui/material';
 import { CATEGORIES, PRICE_RANGES, SORT_OPTIONS } from '../constants/products';
+import styles from '@/styles/FilterBar.module.css';
 
 interface FilterBarProps {
   category: string;
@@ -23,8 +25,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
   onSortChange,
 }) => {
   return (
-    <Box sx={{ mb: 3, p: 2, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 1 }}>
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} alignItems="center">
+    <div className={styles.filterBarContainer}>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} alignItems="center" sx={{ width: '100%' }}>
         {/* Category Filter */}
         <FormControl sx={{ minWidth: 160 }} size="small">
           <InputLabel>Category</InputLabel>
@@ -68,7 +70,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           </Select>
         </FormControl>
       </Stack>
-    </Box>
+  </div>
   );
 };
 

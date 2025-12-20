@@ -29,11 +29,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, renderActions }) =>
               <Typography gutterBottom variant="h6" component="div" noWrap>
                 {product.title}
               </Typography>
-              <Typography variant="body2" sx={{ marginBottom: 1 }}>
-                {product.description.length > 80
-                  ? product.description.slice(0, 80) + '...'
-                  : product.description}
-              </Typography>
               <Typography variant="subtitle1" sx={{ color: 'var(--primary-green)' }}>
                 ${product.price}
               </Typography>

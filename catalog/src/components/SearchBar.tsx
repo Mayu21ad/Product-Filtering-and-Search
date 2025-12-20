@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { InputAdornment, TextField, Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import styles from '@/styles/SearchBar.module.css';
 
 interface SearchBarProps {
   value: string;
@@ -9,10 +11,9 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ value, onChange }) => {
   return (
-    <Box sx={{ mb: 3 }}>
+    <div className={styles.searchBarContainer}>
       <TextField
-        fullWidth
-        size="small"
+        size="medium"
         variant="outlined"
         placeholder="Search products by name or description..."
         value={value}
@@ -20,12 +21,21 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChange }) => {
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <SearchIcon />
+              <SearchIcon sx={{ color: 'var(--primary-green)' }} />
             </InputAdornment>
           ),
         }}
+        inputProps={{ className: styles.searchInput }}
+        sx={{
+          maxWidth: 480,
+          width: '100%',
+          margin: '0 auto',
+          background: '#181f1b',
+          borderRadius: '8px',
+          boxShadow: '0 2px 8px 0 rgba(0,255,153,0.08)',
+        }}
       />
-    </Box>
+    </div>
   );
 };
 

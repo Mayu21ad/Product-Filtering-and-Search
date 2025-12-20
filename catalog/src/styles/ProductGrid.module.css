@@ -15,8 +15,14 @@
 .productCardMedia {
   object-fit: contain;
   height: 220px;
+  width: 80%;
+  max-width: 220px;
   background: #111;
   border-bottom: 1px solid var(--card-outline);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 1/1;
 }
 .productCardContent {
   flex-grow: 1;
@@ -32,4 +38,17 @@
 .fullWidthGrid {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+}
+@media (min-width: 900px) {
+  .MuiGrid-container {
+    justify-content: flex-start;
+    gap: 0;
+  }
+  .MuiGrid-item {
+    max-width: 33.3333%;
+    flex-basis: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
 }

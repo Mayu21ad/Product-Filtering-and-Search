@@ -38,7 +38,7 @@ export default function ProductCatalogPage() {
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom align="center">
-        Product Catalog
+        Shop Corner - Customer Catalog
       </Typography>
       <SearchBar value={search} onChange={setSearch} />
       <FilterBar
