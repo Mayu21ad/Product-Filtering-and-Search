@@ -1,3 +1,4 @@
+// This file has been deleted.
 import Image from "next/image";
 import styles from "./page.module.css";
 

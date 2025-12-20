@@ -1,0 +1,35 @@
+.productCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--card-outline);
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 rgba(0,255,153,0.08);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.productCard:hover {
+  box-shadow: 0 4px 32px 0 rgba(0,255,153,0.18);
+  border-color: #00ff99;
+}
+.productCardMedia {
+  object-fit: contain;
+  height: 220px;
+  background: #111;
+  border-bottom: 1px solid var(--card-outline);
+}
+.productCardContent {
+  flex-grow: 1;
+  color: var(--foreground);
+}
+.productCardActions {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+.fullWidthGrid {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}

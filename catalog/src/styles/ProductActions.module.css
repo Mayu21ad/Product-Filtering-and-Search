@@ -1,0 +1,25 @@
+.productButton {
+  background: var(--primary-green);
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-weight: bold;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.productButton:hover {
+  background: #00cc77;
+  color: #fff;
+}
+.previewButton {
+  background: transparent;
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+  margin-left: 0;
+}
+.previewButton:hover {
+  background: var(--primary-green);
+  color: #111;
+}
